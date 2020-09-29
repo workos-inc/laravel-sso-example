@@ -1,11 +1,24 @@
-## Getting Started
-1. Get composer: [Link](https://getcomposer.org/download/)
-1. Run the following command from the repo root to install deps: `composer i`
-1. Update the apiKey and projectId. That is currently being passed in through this file: `bootstrap/app.php`
-1. Start the server by running: `php artisan serve`
-1. Navigate to `/login`
+# php-sso-example
+An example Laravel app demonstrating SSO with the [WorkOS Laravel SDK](https://github.com/workos-inc/workos-php-laravel).
 
-## Misc stuff
-if you’re interested to see what i had to do to get a route in and the sdk in action, you can check out: `routes/web.php`
+## Dependencies
+Composer - [Link](https://getcomposer.org/)
 
-composer.json is currently configured to grab the sdk from git and is also looking specifically at a branch. when grabbing it, it'll get the head of that branch. to ensure you have the latest, you can update your deps by running `composer u`# laravel-sso-example
+## Setup
+1. Clone the repo and install the dependencies by running the following commands from the repo root:
+    ```bash
+    git clone git@github.com:workos-inc/laravel-sso-example
+    composer i
+    ```
+2. The example app looks for the following environment variables, which you can update in 'bootstrap/config/workos.php' or the '.env' file. :
+    - WORKOS_API_KEY - The WorkOS Secret API key can be found [here](https://dashboard.workos.com/api-keys).
+    - WORKOS_PROJECT_ID - The WorkOS Project ID is specific to SSO and can be found [here](https://dashboard.workos.com/sso/configuration).
+
+    
+3. Start the server by running: `php artisan serve`
+4. After the server is running, navigate to the Laravel development server & type `/login`
+
+
+## Misc 
+If you’re interested to see how a route is built & the WorkOS Laravel SDK in action, you can check out: `app/routes/web.php`
+
