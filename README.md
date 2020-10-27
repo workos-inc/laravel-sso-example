@@ -10,13 +10,16 @@ Composer - [Link](https://getcomposer.org/)
     git clone git@github.com:workos-inc/laravel-sso-example
     composer i
     ```
-2. The example app looks for the following environment variables, which you can update in `bootstrap/config/workos.php` or the `.env` file. :
+
+1. Copy the contents of `.env.example` into `.env` and run `php artisan key:generate` so that the base configuration for Laravel is present.
+
+1. The example app looks for the following environment variables, which you can update in `bootstrap/config/workos.php` or the `.env` file. :
     - WORKOS_API_KEY - The WorkOS Secret API key can be found [here](https://dashboard.workos.com/api-keys).
     - WORKOS_PROJECT_ID - The WorkOS Project ID is specific to SSO and can be found [here](https://dashboard.workos.com/sso/configuration).
 
     
-3. Start the server by running: `php artisan serve`
-4. After the server is running, navigate to the Laravel development server & add `/login`
+1. Start the server by running: `php artisan serve`
+1. After the server is running, navigate to the Laravel development server & add `/login`
 
 
 ## Misc 

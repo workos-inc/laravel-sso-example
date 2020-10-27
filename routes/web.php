@@ -19,7 +19,18 @@ Route::get('/', function () {
 });
 
 Route::get('login', function() {
-    return view('login', ['authUrl' => (new \WorkOS\SSO())->getAuthorizationUrl('workos-okta.com', 'http://localhost:8000/auth/callback', ["things" => "stuff"], null)]);
+    return view('login');
+});
+
+Route::get('auth', function() {
+    $authorizationUrl = (new \WorkOS\SSO())
+        ->getAuthorizationUrl(
+            'foo-corp.com',
+            'http://localhost:8000/auth/callback',
+            ["things" => "stuff"],
+            null
+        );
+    return redirect($authorizationUrl);
 });
 
 Route::get('auth/callback', function(Request $request) {
