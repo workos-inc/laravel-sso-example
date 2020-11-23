@@ -1,4 +1,4 @@
-# php-sso-example
+# laravel-sso-example
 An example Laravel app demonstrating SSO with the [WorkOS Laravel SDK](https://github.com/workos-inc/workos-php-laravel).
 
 ## Dependencies
@@ -24,4 +24,4 @@ Composer - [Link](https://getcomposer.org/)
 
 ## Misc 
 If you’re interested to see how a route is built & the WorkOS Laravel SDK in action, you can check out: `app/routes/web.php`
-
+For more information on usage, check ut our docs [here](https://workos.com/docs).
